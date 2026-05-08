@@ -1,0 +1,10 @@
+========================================================================
+RAGAS comparison table
+========================================================================
+Metric                           V1         V2     Winner
+faithfulness                 0.9767     0.8855         V1
+answer_relevancy             0.8802     0.8863         V2
+context_recall               1.0000     1.0000         V2
+context_precision            0.9867     0.9867         V1
+Target met: faithfulness = 0.9767
+Analysis: V1 is more concise, which often reduces unsupported claims.

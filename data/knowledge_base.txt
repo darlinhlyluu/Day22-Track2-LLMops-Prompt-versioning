@@ -1,0 +1,62 @@
+Day 22 Lab Knowledge Base
+=========================
+
+This compact knowledge base is intentionally aligned with the 50 lab QA pairs so retrieval can find grounded evidence for every question.
+
+1. Machine learning has three main types: supervised learning, unsupervised learning, and reinforcement learning.
+2. Overfitting occurs when a model learns training data too closely, including noise, and generalizes poorly to new data.
+3. The bias-variance tradeoff balances underfitting from high bias against overfitting from high variance; good models minimize total error.
+4. Regularization such as L1 and L2 adds penalty terms to the loss function, discouraging overly complex models and reducing overfitting.
+5. Cross-validation splits data into several folds so model performance can be estimated more reliably across train/test splits.
+6. Backpropagation computes gradients of the loss with respect to model weights using the chain rule of calculus.
+7. Convolutional Neural Networks are used mainly for grid-like data such as images because they capture local spatial patterns.
+8. LSTM networks use gates and a cell state to control information flow and reduce the vanishing gradient problem in long sequences.
+9. Common neural network activation functions include ReLU, sigmoid, tanh, GELU, and Leaky ReLU.
+10. Pooling layers in CNNs reduce spatial dimensions, lower computation, and retain important local features.
+
+11. The transformer architecture uses self-attention to process entire sequences in parallel and was introduced in Attention Is All You Need in 2017.
+12. Word embeddings represent words as dense vectors; semantically similar words are close in vector space.
+13. Transfer learning in NLP pre-trains large models on broad text corpora and fine-tunes them for downstream tasks.
+14. BERT handles language understanding with bidirectional transformer training, masked language modeling, and next sentence prediction.
+15. Self-attention lets each token weigh how relevant the other tokens in the sequence are.
+16. GPT is an autoregressive transformer trained to predict the next token from previous tokens over large text corpora.
+17. Instruction tuning fine-tunes a pre-trained language model on instruction-following examples to better match user intent.
+18. RLHF, or Reinforcement Learning from Human Feedback, uses human preference data to align model outputs with helpful and safe behavior.
+19. Chain-of-thought prompting encourages step-by-step reasoning for complex tasks.
+20. GPT-4 variants support different context lengths; some versions support up to 128K tokens.
+
+21. Retrieval-Augmented Generation combines a generative LLM with retrieval from external knowledge so answers are grounded in relevant documents.
+22. A RAG pipeline typically includes a document loader, text splitter, embedding model, vector store, retriever, prompt, LLM, and output parser.
+23. Dense retrieval encodes queries and documents as embeddings and ranks documents by vector similarity.
+24. Chunking strategy is important in RAG because it affects retrieval precision, recall, and whether the evidence fits in the model context window.
+25. Advanced RAG techniques include re-ranking, query expansion, HyDE, iterative retrieval, and multi-hop retrieval.
+26. Vector databases store high-dimensional embeddings and support fast similarity search.
+27. FAISS is a Meta AI library for efficient similarity search and clustering over dense vectors.
+28. Text embeddings capture semantic meaning by mapping text into numerical vectors where similar meanings have nearby vectors.
+29. HNSW is an approximate nearest neighbor algorithm that uses a hierarchical small-world graph for efficient vector search.
+30. Hybrid search combines dense vector search with sparse keyword search such as BM25 and can merge results with reciprocal rank fusion.
+
+31. LangChain is an open-source framework for building LLM applications with prompts, chains, agents, tools, retrievers, and data connections.
+32. LangChain Expression Language, or LCEL, composes runnables with the pipe operator and supports streaming, async execution, and batching.
+33. LangGraph extends LangChain for stateful multi-actor workflows represented as graphs that can contain cycles.
+34. LangChain memory patterns include buffer memory, summary memory, window memory, entity memory, and vector store memory.
+35. LangChain retrievers fetch relevant documents for a query from vector stores, BM25 indexes, search APIs, or other data sources.
+
+36. LangSmith is a platform for debugging, tracing, evaluating, and monitoring LLM applications.
+37. LangSmith traces capture inputs, outputs, latency, errors, token usage, and nested component runs.
+38. LangSmith Prompt Hub stores, versions, and shares prompt templates for reuse, A/B testing, evaluation, and rollback.
+39. LangSmith helps monitor production LLM applications by surfacing traces, latency statistics, error rates, feedback, token usage, and evaluation results.
+40. LangSmith datasets store examples with inputs and expected outputs for systematic testing and model or prompt comparison.
+
+41. RAGAS is an evaluation framework for RAG systems with metrics including faithfulness, answer relevancy, context recall, and context precision.
+42. RAGAS computes faithfulness by checking whether claims in the answer are supported by the retrieved contexts.
+43. Answer relevancy measures how directly the generated answer addresses the user's original question.
+44. Context recall measures whether retrieved contexts contain the information needed to answer according to the reference answer.
+45. RAGAS evaluation needs user questions, generated answers, retrieved contexts, and often reference answers.
+
+46. Guardrails AI validates, corrects, and constrains LLM outputs with validators and on-fail actions.
+47. PII means personally identifiable information; detecting it prevents privacy leaks and compliance violations.
+48. Structured output validation ensures LLM responses conform to required formats or schemas such as valid JSON.
+49. Constitutional AI guides model behavior with written principles and self-critique, reducing dependence on human feedback labels alone.
+50. Common AI safety concerns with LLMs include hallucination, toxicity, bias, PII leakage, insecure tool use, and jailbreak attacks.
+
